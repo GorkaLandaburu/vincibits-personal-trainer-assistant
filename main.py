@@ -4,15 +4,8 @@ import time
 import logging
 from datetime import datetime
 
-load_dotenv()
-# openai.api_key = os.environ.get("OPENAI_API_KEY")
-# defaults to getting the key using os.environ.get("OPENAI_API_KEY")
-# if you saved the key under a different environment variable name, you can do something like:
-# client = OpenAI(
-#   api_key=os.environ.get("CUSTOM_ENV_NAME"),
-# )
-
-client = openai.OpenAI()
+# Load the environment variables
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 model = "gpt-3.5-turbo-16k"
 
 # # ==  Create our Assistant (Uncomment this to create your assistant) ==
